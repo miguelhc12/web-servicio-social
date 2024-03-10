@@ -1,0 +1,299 @@
+
+
+.mainContainer {
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='329' height='329' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='88' y1='88' x2='0' y2='0'%3E%3Cstop offset='0' stop-color='%23005092'/%3E%3Cstop offset='1' stop-color='%23007cc4'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='75' y1='76' x2='168' y2='160'%3E%3Cstop offset='0' stop-color='%23868686'/%3E%3Cstop offset='0.09' stop-color='%23ababab'/%3E%3Cstop offset='0.18' stop-color='%23c4c4c4'/%3E%3Cstop offset='0.31' stop-color='%23d7d7d7'/%3E%3Cstop offset='0.44' stop-color='%23e5e5e5'/%3E%3Cstop offset='0.59' stop-color='%23f1f1f1'/%3E%3Cstop offset='0.75' stop-color='%23f9f9f9'/%3E%3Cstop offset='1' stop-color='%23FFFFFF'/%3E%3C/linearGradient%3E%3Cfilter id='c' x='0' y='0' width='200%25' height='200%25'%3E%3CfeGaussianBlur in='SourceGraphic' stdDeviation='12' /%3E%3C/filter%3E%3C/defs%3E%3Cpolygon fill='url(%23a)' points='0 174 0 0 174 0'/%3E%3Cpath fill='%23000' fill-opacity='0.08' filter='url(%23c)' d='M121.8 174C59.2 153.1 0 174 0 174s63.5-73.8 87-94c24.4-20.9 87-80 87-80S107.9 104.4 121.8 174z'/%3E%3Cpath fill='url(%23b)' d='M142.7 142.7C59.2 142.7 0 174 0 174s42-66.3 74.9-99.3S174 0 174 0S142.7 62.6 142.7 142.7z'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+
+
+
+
+  
+  /* plus sign */
+  .sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sign svg {
+    width: 17px;
+  }
+  
+  .sign svg path {
+    fill: var(--night-rider);
+  }
+  /* text */
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: var(--night-rider);
+    font-size: 18px;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  /* hover effect on button width */
+  .Btn:hover {
+    width: 125px;
+    border-radius: 5px;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's text */
+  .Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+  }
+  /* button click effect*/
+  .Btn:active {
+    transform: translate(2px ,2px);
+  }
+
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+.header .nav-list {
+    list-style: none;
+}
+
+.header .nav-list li {
+    display: inline-block;
+    padding: 0 20px;
+    transition: all 0.2s;
+    position: relative; /* Añadimos posición relativa para el dropdown */
+}
+
+
+
+.header .nav-list a {
+    font-size: 700;
+    color: #eceff1;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+.header .nav-list li a:hover {
+    color: #ffffffa8;
+}
+
+.header .btn button {
+    margin-left: 20px;
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover {
+    background-color: #e2f1f8;
+    color: #181bb9;
+    transform: scale(1.1);
+}
+
+/* Estilos del dropdown */
+.header .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    z-index: 1;
+    background-color: rgba(20, 88, 167, 0.9); /* Fondo del dropdown */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.header .nav-list li:hover .dropdown {
+    display: block;
+    
+}
+
+.header .dropdown li {
+    padding: 5px 0;
+}
+
+.header .dropdown a {
+    color: #ffffff; /* Color del texto en el dropdown */
+    text-decoration: none;
+    display: flex; /* Para alinear ícono y texto */
+    align-items: center; /* Para alinear ícono y texto */
+}
+
+.header .dropdown a:hover {
+    color: #6d6d6d; /* Cambiar color del texto al pasar el mouse */
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent; /* Borde izquierdo transparente */
+    border-right: 5px solid transparent; /* Borde derecho transparente */
+    border-top: 5px solid #ffffff; /* Borde superior de color blanco */
+    margin-left: 10px; /* Espacio entre el texto y la flecha */
+    position: relative; /* Cambiar a posición relativa */
+    top: 15px; /* Ajustar ligeramente la posición vertical */
+}
+
+.home {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    padding: 0 50px;
+}
+
+.chartContainer {
+    width: 45%;
+    background-color: #ffffff; /* Cambiado a blanco */
+    border-radius: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+    
+}
+
+.canvasContainer {
+    width: 100%;
+}
+
+.infoContainer {
+    background-color: rgba(255, 255, 255, 0);
+    width: 45%;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    
+}
+
+.info-container h2 {
+    color: #0e0372;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.info-container p {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+#requerimientos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    height: auto; /* Cambiado a auto para adaptarse al contenido */
+    margin-top: 60px; /* Agregado margen superior */
+}
+.h2{
+    color: #0e0372;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 180px;
+    width: 100%;
+    margin-top: 20px; /* Agregado margen superior */
+    padding-bottom: 40px; /* Agregado margen inferior */
+}
+
+.card {
+    width: 190px;
+    height: 254px;
+    transition: all 0.2s;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 7px 7px 0px 0px #0b2447;
+    margin-bottom: 20px; /* Agregado margen inferior */
+}
+.card img {
+    width: 60px; /* Ancho de la imagen */
+    height: 60px; /* Alto de la imagen */
+    margin-bottom: 10px; /* Margen inferior para separar la imagen del texto */
+}
+.cardInner {
+    width: inherit;
+    height: inherit;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-inner p {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0px 0px 5px 5px #0b2447;
+    animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+    top: -25px;
+    left: -25px;
+}
+
+.circle:nth-child(2) {
+    bottom: -25px;
+    right: -25px;
+    animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes move-down1 {
+    to {
+        transform: translateY(10px);
+    }
+}
+
+
+.centerH2{
+    text-align: center; 
+}
